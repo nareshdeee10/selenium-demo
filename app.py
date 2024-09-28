@@ -17,6 +17,7 @@ def get_website_content(url):
         options = webdriver.ChromeOptions()
         options.add_argument('--headless')
         options.add_argument('--disable-gpu')
+        options.add_argument("javascript.enabled", True)
         options.add_argument('--window-size=1920,1200')
         driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),
                                   options=options)
